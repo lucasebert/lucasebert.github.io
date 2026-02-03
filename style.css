@@ -28,8 +28,29 @@ body{margin:0;background:var(--bg);color:var(--text);line-height:1.5;font-size:1
 .inline-link{margin-left:.5rem;color:var(--muted);text-decoration:underline}
 
 /* PHOTO COLUMN */
-.hero-photo{display:flex;justify-content:center;align-items:flex-start;margin-top:0.6rem}
-.profile-photo{width:100%;max-width:220px;height:auto;border-radius:8px;object-fit:cover;display:block;box-shadow:0 8px 18px rgba(11,92,255,0.12);border:1px solid #e9f0fb}
+/* place the photo visually in the middle column even when DOM position is inside left column */
+.hero-photo{
+  grid-column: 2 / 3;        /* force the photo to appear in the middle column */
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  margin-top:0.6rem;
+}
+
+/* keep the same sizing and visual style for the image (adjust max-width if needed) */
+.profile-photo{
+  width:100%;
+  max-width:220px;
+  height:auto;
+  border-radius:8px;
+  object-fit:cover;
+  display:block;
+  box-shadow:0 8px 18px rgba(11,92,255,0.12);
+  border:1px solid #e9f0fb;
+}
+
+/* harmless spacer to preserve grid structure */
+.hero-spacer{grid-column:2/3;height:0;visibility:hidden}
 
 /* ASIDE */
 .aside-card{background:#fff;border-radius:var(--radius);padding:1rem;border:1px solid #e9f0fb}
@@ -51,7 +72,7 @@ body{margin:0;background:var(--bg);color:var(--text);line-height:1.5;font-size:1
 /* Responsive: stack on small screens */
 @media (max-width:880px){
   .hero-grid{grid-template-columns:1fr;gap:1rem}
-  .hero-photo{order:2;margin-top:0.75rem;justify-content:center}
+  .hero-photo{order:2;margin-top:0.75rem;justify-content:center;grid-column:auto}
   .hero-right{order:3}
   .hero-left{order:1}
   .two-col{grid-template-columns:1fr}

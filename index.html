@@ -29,12 +29,16 @@
           <a class="btn outline" href="resume.pdf" target="_blank" rel="noopener">Download Resume (PDF)</a>
           <a class="inline-link" href="https://www.linkedin.com/in/lucas-ebert-027841213/" target="_blank" rel="noopener">LinkedIn</a>
         </p>
+
+        <!-- MOVED PHOTO: placed here so it appears under the buttons in the DOM,
+             but CSS keeps it visually in the middle column (left of Quick Profile) -->
+        <div class="hero-photo">
+          <img src="photo.jpg" alt="Lucas Langston Ebert" class="profile-photo" />
+        </div>
       </div>
 
-      <!-- PHOTO COLUMN -->
-      <div class="hero-photo">
-        <img src="photo.jpg" alt="Lucas Langston Ebert" class="profile-photo" />
-      </div>
+      <!-- spacer preserves 3-column grid while photo is forced into column 2 -->
+      <div class="hero-spacer" aria-hidden="true"></div>
 
       <div class="hero-right">
         <aside class="aside-card" aria-labelledby="about-aria">
@@ -53,7 +57,6 @@
   </header>
 
   <main class="container" role="main">
-    <!-- (rest of your content unchanged) -->
     <section id="about" class="section">
       <h2>About</h2>
       <p>
@@ -63,11 +66,87 @@
 
     <section id="experience" class="section">
       <h2>Experience</h2>
-      <!-- jobs here (unchanged) -->
+
+      <article class="job">
+        <h3>Tesla — Operations Advisor</h3>
+        <p class="job-meta">Santa Barbara, CA · December 2022 – Present</p>
+        <ul>
+          <li>Coordinated luxury vehicle deliveries and conducted final inspections; presented features to new owners while meeting/exceeding KPIs set by management.</li>
+          <li>Managed lot logistics and organization for 100+ vehicles to ensure smooth day-to-day operations between Sales, Service, and Delivery teams.</li>
+          <li>Maintained CRM systems to ensure accurate, timely vehicle and customer information; tracked inventory and logged VINs across the region.</li>
+          <li>Supported detailing and service teams and assisted management in creating and promoting events to draw a larger customer base.</li>
+          <li>Contributed to end-of-quarter delivery pushes, working 50+ hour weeks when needed to exceed regional targets.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3>Santa Barbara Golf Club — Guest Services Associate</h3>
+        <p class="job-meta">Santa Barbara, CA · March 2022 – December 2022</p>
+        <ul>
+          <li>Managed fleet operations for 70+ golf carts, maintained practice facilities, oversaw inventory/logistics, and delivered guest-focused service.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3>Embassy Suites by Hilton (Mandalay Beach Resort) — Restaurant Host</h3>
+        <p class="job-meta">Oxnard, CA · June 2021 – August 2021</p>
+        <ul>
+          <li>Greeted and seated guests, supported dining staff with table management and food running, and helped maintain high service standards.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3>Baskin-Robbins — Crew Member</h3>
+        <p class="job-meta">West Hills, CA · December 2019 – March 2020</p>
+        <ul>
+          <li>Provided customer service, processed orders, restocked inventory, and assisted with closing and cleanliness duties.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3>LAPD Cadet Leadership Academy — Cadet</h3>
+        <p class="job-meta">Los Angeles, CA · August 2018 – July 2019</p>
+        <ul>
+          <li>Completed an 18-week leadership program; participated in weekly meetings, community outreach, volunteer work, and policing initiatives.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3>West Hills Pizza Company — Section Cook</h3>
+        <p class="job-meta">West Hills, CA · August 2018 – February 2019</p>
+        <ul>
+          <li>Prepared food orders, maintained restaurant cleanliness, and supported opening/closing duties and customer service.</li>
+        </ul>
+      </article>
     </section>
 
     <section id="education" class="section two-col">
-      <!-- education + skills (unchanged) -->
+      <div>
+        <h2>Education</h2>
+        <ul>
+          <li><strong>University of California, Santa Barbara</strong> — Communication (Dean’s Honors). Graduated June 2025</li>
+          <li><strong>Santa Barbara City College</strong> — Communication Science & Social Behavioral Sciences (Honors)</li>
+          <li><strong>University of Colorado, Boulder</strong> — Computer Science (coursework)</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Skills & Awards</h2>
+        <h3>Skills</h3>
+        <ul>
+          <li>Technical: Microsoft Office, Adobe Creative Suite (Photoshop, Illustrator), Java, C++, Python, OS navigation, hardware troubleshooting</li>
+          <li>Tools & platforms: Microsoft Teams, Slack, CRM systems</li>
+          <li>Professional strengths: strong written & verbal communication, collaboration, leadership, problem-solving, coachability</li>
+        </ul>
+
+        <h3>Awards</h3>
+        <ul>
+          <li>Tesla Advisor of the Quarter (2x)</li>
+          <li>LAPD Cadet Leadership Academy Graduation Certificate</li>
+          <li>CSUN Public Speaking Completion Certificate (LAPD Cadet)</li>
+          <li>Westhills Baseball Thoroughbred Award</li>
+        </ul>
+      </div>
     </section>
 
     <section id="contact" class="section">
