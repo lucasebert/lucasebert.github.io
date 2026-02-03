@@ -4,7 +4,7 @@
   --text: #0f1724;
   --muted: #6b7280;
   --accent: #0b5cff;
-  --container: 1000px;
+  --container: 920px; /* slightly narrower to reduce white space */
   --radius: 10px;
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   color-scheme: light;
@@ -13,16 +13,16 @@
 *{box-sizing:border-box}
 html,body{height:100%}
 body{margin:0;background:var(--bg);color:var(--text);line-height:1.5;font-size:16px}
-.container{max-width:var(--container);margin:0 auto;padding:2rem}
+.container{max-width:var(--container);margin:0 auto;padding:1.75rem}
 
 /* HERO */
-.hero{background:var(--surface);padding:2.5rem 0;border-bottom:1px solid #e6edf3}
-/* three columns: main, photo, aside */
-.hero-grid{display:grid;grid-template-columns:1fr 220px 320px;gap:1.5rem;align-items:start}
+.hero{background:var(--surface);padding:2rem 0;border-bottom:1px solid #e6edf3}
+/* three columns: main, photo, aside — tightened spacing */
+.hero-grid{display:grid;grid-template-columns:1fr 220px 300px;gap:1rem;align-items:start}
 .name{margin:0;font-size:2rem;letter-spacing:0.2px}
 .title{margin:.25rem 0;color:var(--muted);font-weight:600}
 .meta{margin:.5rem 0;color:var(--muted);font-size:.95rem}
-.links{margin-top:1rem}
+.links{margin-top:0.85rem}
 .btn{display:inline-block;padding:.55rem .9rem;background:var(--accent);color:#fff;border-radius:8px;text-decoration:none;font-weight:600;margin-right:.5rem}
 .btn.outline{background:transparent;color:var(--accent);border:1px solid var(--accent);padding:.45rem .8rem}
 .inline-link{margin-left:.5rem;color:var(--muted);text-decoration:underline}
@@ -34,7 +34,7 @@ body{margin:0;background:var(--bg);color:var(--text);line-height:1.5;font-size:1
   display:flex;
   justify-content:center;
   align-items:flex-start;
-  margin-top:0.6rem;
+  margin-top:0.4rem;         /* reduced top margin so photo sits closer to buttons */
 }
 
 /* keep the same sizing and visual style for the image (adjust max-width if needed) */
